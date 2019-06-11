@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import './App.css';
-import Header from '../Components/Header';
+import ToDoHeader from '../Components/ToDoHeader';
 import ToDoList from '../Components/ToDoList';
 
 class App extends React.Component {
@@ -21,7 +21,7 @@ class App extends React.Component {
     const { todos } = this.state
     return (
       <div className="App">
-        <Header/>
+        <ToDoHeader/>
         <ToDoList todos={todos}/>
       </div>
     );
