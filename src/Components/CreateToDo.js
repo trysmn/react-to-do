@@ -6,7 +6,7 @@ const CreateForm = ({ createTodo, handleTodoChange }) => {
         <Form>
             <Form.Field>
                 <label>User id</label>
-                <input placeholder='User id' name='userId' onChange={handleTodoChange}/>
+                <input placeholder='User id' type="number" name='userId' onChange={handleTodoChange}/>
             </Form.Field>
             <Form.Field>
                 <label>Title</label>

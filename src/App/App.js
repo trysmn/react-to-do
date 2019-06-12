@@ -29,8 +29,9 @@ class App extends React.Component {
   handleTodoChange = (event, data) => {
     let value;
     let name;
+    console.log(event.target.value);
     if (!data) {
-      value = event.target.value;
+      value = typeof parseInt(event.target.value) === Number ? parseInt(event.target.value) : event.target.value;
       name = event.target.name;
     } else {
       value = data.checked;
@@ -46,6 +47,11 @@ class App extends React.Component {
   createTodo = (event) => {
     console.log('created!')
     // grab this.state.newTodo
+    this.setState({
+      todos: [
+        ...this.state.todos, this.state.newTodo
+      ]
+    });
     // add this to our Todos array in state (200 todos)
     // spread operater, new tosdo
   }
