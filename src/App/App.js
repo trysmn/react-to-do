@@ -17,8 +17,13 @@ class App extends React.Component {
     })
   }
 
+  filterTodos = (todos, userId) => todos.filter(todo => 
+      todo.userId === userId
+  );
+
   render() {
-    const { todos } = this.state
+    // const { todos } = this.state
+    const todos = this.filterTodos(this.state.todos, 2);
     return (
       <div className="App">
         <ToDoHeader/>
