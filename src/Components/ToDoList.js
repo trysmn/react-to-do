@@ -1,13 +1,17 @@
 import React from 'react'
+import { Segment, List } from 'semantic-ui-react'
+
 import ToDoElement from './ToDoElement';
 
 const ToDoList = ({todos}) => { 
     return (
-        <div data-testid='toDoList'>
+        <Segment compact>
+            <List celled>
             {todos.map(todo => 
                 <ToDoElement todo={todo}/>
             )}
-        </div>
+            </List>
+        </Segment>
     )
 }
 

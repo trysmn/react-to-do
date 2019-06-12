@@ -1,11 +1,15 @@
 import React from 'react'
+import { List } from 'semantic-ui-react'
+
 
 const ToDoElement = ({ todo }) => {
     return (
-        <div>
-            <h1>{todo.title}</h1>
-            <p>Status: {todo.completed ? "Completed" : "Incomplete"}</p>
-        </div>
+        <List.Item>
+            <List.Content>
+            <List.Header>{todo.title}</List.Header>
+            <List.Description>Status: {todo.completed ? "Completed" : "Incomplete"}</List.Description>
+            </List.Content>
+        </List.Item>
     )
 }
 
