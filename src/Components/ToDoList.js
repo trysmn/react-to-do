@@ -6,7 +6,7 @@ import ToDoElement from './ToDoElement';
 const ToDoList = ({todos}) => { 
     return (
         <Segment compact>
-            <List celled>
+            <List celled ordered>
             {todos.map(todo => 
                 <ToDoElement todo={todo}/>
             )}
